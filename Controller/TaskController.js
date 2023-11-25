@@ -54,7 +54,7 @@ export const UpdateTask = async (req,res) =>{
         if (!updatedTask) {
             return res.status(404).json({ message: 'Task not found' });
         }
-        res.status(200).json(updatedTask); // Return the updated task as JSON response
+        res.status(200).json({message:"Task Updated"}); // Return the updated task as JSON response
     } catch (error) {
         console.log(error);
     }
@@ -65,7 +65,7 @@ export const DeleteTask = async (req,res) =>{
     try {
         const {id} = req.params;
         const deleteTask = await TaskModel.findByIdAndDelete({_id:id})
-        return res.status(200).json("Deleted Successfully");
+        return res.status(200).json({message:"Deleted Successfully"});
     } catch (error) {
         return res.status(420).json("error Occurred");
     }
