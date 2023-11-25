@@ -1,5 +1,5 @@
 import express from "express";
-import {TaskCreation,GetAllTask,GetSingleTask,UpdateTask,DeleteTask} from '../Controller/TaskController.js'
+import {TaskCreation,GetAllTask,GetSingleTask,UpdateTask,DeleteTask,CompletedTask} from '../Controller/TaskController.js'
 const router = express.Router();
 import authenticateToken from '../Middleware/authenticationMiddleware.js'
 
@@ -8,4 +8,5 @@ router.get('/GetAllTask',authenticateToken,GetAllTask)
 router.get('/GetSingleTask/:id',authenticateToken,GetSingleTask)
 router.patch('/UpdateTask/:id',authenticateToken,UpdateTask)
 router.delete('/DeleteTask/:id',authenticateToken,DeleteTask)
+router.get('/TaskStatus',authenticateToken,CompletedTask)
 export default router;

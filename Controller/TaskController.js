@@ -5,7 +5,7 @@ export const TaskCreation = async (req, res) => {
   try {
     const { title, description, assigneduser, DueDate, completionStatus } = req.body;
 
-    const data = await new Taskmodel({
+    const data = await new TaskModel({
       title: title,
       description: description,
       assigneduser: assigneduser,
@@ -24,7 +24,7 @@ export const TaskCreation = async (req, res) => {
 /*Getting All the Task*/
 export const GetAllTask = async (req,res) =>{
     try {
-        const data = await Taskmodel.find();
+        const data = await TaskModel.find();
         return res.status(200).json(data);
     } catch (error) {
         console.log(error)
@@ -68,5 +68,18 @@ export const DeleteTask = async (req,res) =>{
         return res.status(200).json("Deleted Successfully");
     } catch (error) {
         return res.status(420).json("error Occurred");
+    }
+}
+
+export const CompletedTask = async (req,res) =>{
+    try {
+        const tasks = await TaskModel.find();
+        
+        const completedTasks = tasks.filter(task => task.completion === "Done");
+        const pendingTasks = tasks.filter(task => task.completion !== "Done");
+
+        res.status(200).json({completedTasks,pendingTasks});
+    } catch (error) {
+        console.log(error);
     }
 }
