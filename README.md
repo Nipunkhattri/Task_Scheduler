@@ -13,7 +13,7 @@ Middleware functions to handle common tasks such as error handling, request logg
 
 ## Tech Stack:
 
-Node JS , MongoDB , Postman 
+Node JS, Express JS , MongoDB , Postman 
 
 ## Postman
 
