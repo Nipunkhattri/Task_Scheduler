@@ -1,7 +1,5 @@
 # TaskIntern
 
-## Task:
-
 ### Create RESTful endpoints for the API using Node JS
 1. Create a new task
 2. Retrieve a list of all tasks
