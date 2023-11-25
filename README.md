@@ -19,7 +19,7 @@ Node JS, Express JS , MongoDB , Postman
 
 ## API Endpoints:
 
-### User Login
+### User Route
 
 #### Register The User
 
