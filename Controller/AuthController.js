@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import AuthModel from '../model/AuthModel.js'
 import dotenv from 'dotenv'
 
