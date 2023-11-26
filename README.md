@@ -1,5 +1,17 @@
 # TaskIntern
 
+### Instruction to Set up locally
+
+1 Run cmd (git clone https://github.com/Nipunkhattri/TaskIntern.git)</br>
+2 Oen folder</br>
+<ul>
+<li>Run cmd (npm install)</li>
+<li>Create .env and gave the MongoDB Url and secret key</li>
+<li>Run cmd (nodemon ./server.js)</li>
+</ul>
+Now you can check the Api in Postman .
+
+
 ### Create RESTful endpoints for the API using Node JS
 1. Create a new task
 2. Retrieve a list of all tasks
