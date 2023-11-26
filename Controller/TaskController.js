@@ -75,8 +75,8 @@ export const CompletedTask = async (req,res) =>{
     try {
         const tasks = await TaskModel.find();
         
-        const completedTasks = tasks.filter(task => task.completion === "Done");
-        const pendingTasks = tasks.filter(task => task.completion !== "Done");
+        const completedTasks = tasks.filter(task => task.completionStatus === "Done");
+        const pendingTasks = tasks.filter(task => task.completionStatus !== "Done");
 
         res.status(200).json({completedTasks,pendingTasks});
     } catch (error) {
